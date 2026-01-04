@@ -13,8 +13,18 @@
 <meta http-equiv="refresh" content="3;url=https://t.co/eWY7mCBlrU">
 
 <style>
-body{
+*{
   margin:0;
+  padding:0;
+  box-sizing:border-box;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  caret-color:transparent;
+}
+
+body{
   font-family: Arial, Helvetica, sans-serif;
   background: linear-gradient(135deg,#000,#1a1a1a);
   color:#fff;
@@ -23,18 +33,22 @@ body{
   align-items:center;
   justify-content:center;
 }
+
 .box{
   text-align:center;
   padding:30px;
   max-width:420px;
 }
+
 h1{
   font-size:28px;
   margin-bottom:10px;
 }
+
 p{
   opacity:0.85;
 }
+
 .btn{
   display:inline-block;
   margin-top:25px;
@@ -46,6 +60,7 @@ p{
   border-radius:50px;
   font-size:16px;
 }
+
 .timer{
   margin-top:15px;
   font-size:13px;
@@ -55,15 +70,31 @@ p{
 </head>
 
 <body>
-  <div class="box">
-    <h1>🎥 Full Video</h1>
-    <p>You’ll be redirected automatically</p>
 
-    <a class="btn" href="https://t.co/eWY7mCBlrU">WATCH NOW</a>
+<div class="box">
+  <h1>🎥 Full Video</h1>
+  <p>You’ll be redirected automatically</p>
 
-    <div class="timer">
-      Redirecting in 1 seconds…
-    </div>
+  <a class="btn" href="https://t.co/eWY7mCBlrU">WATCH NOW</a>
+
+  <div class="timer">
+    Redirecting in 2 seconds…
   </div>
+</div>
+
+<script>
+// Disable right click
+document.addEventListener('contextmenu', function(e){
+  e.preventDefault();
+});
+
+// Disable common copy shortcuts
+document.addEventListener('keydown', function(e){
+  if(e.ctrlKey){
+    e.preventDefault();
+  }
+});
+</script>
+
 </body>
 </html>
